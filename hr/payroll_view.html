@@ -1,0 +1,110 @@
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../style/emp_style.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../style/bootstrap.min.css">
+	<link rel="stylesheet" href="../style/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="../style/responsive.bootstrap.min.css">
+	<script src="../style/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="../style/showData.js"></script>
+	<script src="../style/bootstrap.min.js"></script>
+	</head>
+<body onload=display_ct();>
+<div class="main">
+	<div class="header">
+	<table>
+	<tr><td>
+	<img src="../img/logo.png" height="120px" width="110px"/>
+	</td>
+	<td></td>
+	<td>
+	<span id='ct'></span>
+	</td></tr>
+	</table>
+	</div>
+	
+	<div class="nav">
+	<br>
+	<img src="../img/profile.png" height="140px" width="140px"/>
+	<br>
+	<p>Lyean Marielle R. Elisan</p>
+	<br>
+	<center>
+	<table>
+	<tr><td><a href="emp_view.html"><button>Employees</button></a></td></tr>
+	<tr><td><a href="attendance_view.html"><button>Attendance</button></a></td></tr>
+	<tr><td><a href="payroll_view.html"><button class="pay">Payroll</button></a></td></tr>
+	</table>
+	<br><br>
+	<a href="Login.php"><button class="logout">Logout</button></a>
+	</center>
+	</div>
+	
+	<div class="con">
+		<div class="title">
+		<p>Employee Payroll</p>
+		</div>
+		<div class="info table-wrapper-scroll-y my-custom-scrollbar">
+		<center>
+		<table class="table table-hover">
+		<thead>
+		<tr>
+		<th scope="col">#</th>
+		<th scope="col">Name</th>
+		<th scope="col">Role</th>
+		<th scope="col">Pay Period</th>
+		<th scope="col">Option</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td><select></td>
+		<td>generate pdf</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		</tbody>
+		</table>
+		</center>
+		</div>
+	</div>
+</div>
+</body>
+	<script type="text/javascript"> 
+	function display_c(){
+	var refresh=1000; // Refresh rate in milli seconds
+	mytime=setTimeout('display_ct()',refresh)
+	}
+	function display_ct() {
+	var x = new Date()
+	document.getElementById('ct').innerHTML = x;
+	display_c();
+	}
+</script>
+</html>

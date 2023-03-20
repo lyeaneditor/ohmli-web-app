@@ -1,0 +1,142 @@
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../style/emp_style.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../style/bootstrap.min.css">
+	<link rel="stylesheet" href="../style/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="../style/responsive.bootstrap.min.css">
+	<script src="../style/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="../style/showData.js"></script>
+	<script src="../style/bootstrap.min.js"></script>
+	</head>
+<body onload=display_ct();>
+<div class="main">
+	<div class="header">
+	<table>
+	<tr><td>
+	<img src="../img/logo.png" height="120px" width="110px"/>
+	</td>
+	<td></td>
+	<td>
+	<span id='ct'></span>
+	</td></tr>
+	</table>
+	</div>
+	
+	<div class="nav">
+	<br>
+	<img src="../img/profile.png" height="140px" width="140px"/>
+	<br>
+	<p>Lyean Marielle R. Elisan</p>
+	<br>
+	<center>
+	<table>
+	<tr><td><a href="emp_view.html"><button>Employees</button></a></td></tr>
+	<tr><td><a href="attendance_view.html"><button>Attendance</button></a></td></tr>
+	<tr><td><a href="payroll_view.html"><button>Payroll</button></a></td></tr>
+	<tr><td><a href="fem_doctor_view.html"><button class="doc">Doctor</button></a></td></tr>
+	<tr><td><a href="sched_view.html"><button>Schedule</button></a></td></tr>
+	<tr><td><a href="prof_view.html"><button>Profile</button></a></td></tr>
+
+	</table>
+	<br><br>
+	<a href="Login.php"><button class="logout">Logout</button></a>
+	</center>
+	</div>
+	
+	<div class="con">
+		<div class="title">
+		<p>Doctors' List Appointment
+		<table>
+		<tr>
+		<td><a href=""><img src="../img/print.png"/><a/></td>
+		<td><a href=""><img src="../img/add-user.png"/><a/></td>
+		<td><a href=""><img src="../img/edit-file.png"/><a/></td>
+		</tr>
+		</table>
+		</p>
+		</div>
+		<div class="info table-wrapper-scroll-y my-custom-scrollbar">
+		<table>
+		<tr><td><a href="fem_doctor_view.html"><button>Female Doctor</button></a></td>
+		<td><a href="male_doctor_view.html"><button>Male Doctor</button></a></td></tr>
+		</table>
+		<br>
+		<table>
+		<tr><td>Doctor:</td>
+		<td>Lyean Elisan</td></tr>
+		</table>
+		<br>
+		<center>
+		<table class="table table-hover">
+		<thead>
+		<tr>
+		<th scope="col">Patient</th>
+		<th scope="col">Age</th>
+		<th scope="col">Service</th>
+		<th scope="col">Test</th>
+		<th scope="col">Time</th>
+		<th scope="col">Status</th>
+		<th scope="col">Option</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		<tr>
+		<td scope="row">sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		<td>sample</td>
+		</tr>
+		</tbody>
+		</table>
+		</center>
+		</div>
+	</div>
+</div>
+</body>
+	<script type="text/javascript"> 
+	function display_c(){
+	var refresh=1000; // Refresh rate in milli seconds
+	mytime=setTimeout('display_ct()',refresh)
+	}
+	function display_ct() {
+	var x = new Date()
+	document.getElementById('ct').innerHTML = x;
+	display_c();
+	}
+</script>
+</html>

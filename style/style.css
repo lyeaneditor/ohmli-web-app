@@ -1,0 +1,106 @@
+body {
+	margin: auto;
+	font-family: segoe ui;
+}
+.header {
+	border: 2px solid black;
+	height: 15%;
+	width: 100%;
+	background-color: black;
+}
+.header td {
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 500px;
+}
+.header span {
+	font-size: 15px;
+	color: white;
+}
+.nav {
+	float: left;
+	height: 81%;
+	width: 20%;
+	background-color: black;
+}
+.nav p{
+	font-size: 25px;
+	color: white;
+	text-align: center
+}
+.nav img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav button {
+	font-weight: bold;
+	font-size: 20px;
+	height: 50px;
+	width: 200px;
+	color: white;
+	background-color: #a22020;
+}
+ul{
+	list-style: none;
+}
+.nav button:hover {
+	font-weight: bold;
+	font-size: 25px;
+	height: 50px;
+	width: 200px;
+	color: #a22020;
+	background-color: white;
+}
+.nav .emp {
+	font-weight: bold;
+	font-size: 25px;
+	height: 50px;
+	width: 200px;
+	color: #a22020;
+	background-color: white;
+}
+.nav .logout {
+	font-weight: bold;
+	font-size: 20px;
+	height: 50px;
+	width: 150px;
+	color: white;
+	background-color: #a22020;
+	border-radius: 25px;
+}
+.con {
+	float: right;
+	width: 80%;
+	height: 100%;
+}
+.title {
+	border: 1px solid black;
+	height: 10%;
+	width: 100%;
+	background-color: #a22020;
+}
+.title p {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 2%;
+	margin-top: 1.5%;
+}
+.info {
+	border: 1px solid black;
+	height: 71%;
+	width: 100%;
+}
+.my-custom-scrollbar {
+position: relative;
+height: 71%;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+@media screen and (max-width: 800px) {
+  .main, .header, .nav, .con, .info, .title {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller
+}

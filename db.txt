@@ -1,0 +1,76 @@
+db_ohmli
+
+tbl_user
+id -- auto_int
+emp_id
+first_name
+last_name
+username
+password
+role
+
+tbl_appointment
+id -- auto_int
+first_name
+last_name
+email
+contact_num
+sex
+date_of_birth
+address
+services
+appointment_date
+appointment_time
+
+tbl_patient
+id -- auto_int
+first_name
+last_name
+age
+type
+time
+status
+
+tbl_employee
+id -- auto_int
+emp_id
+first_name
+last_name
+role
+age
+address
+birthdate
+contact_num
+sss_num
+pagibig_num
+philhealth_num
+tin_num
+emerg_contact
+emerg_contact_first_name
+emerg_contact_last_name
+
+tbl_attendance
+id -- auto_int
+emp_id
+date
+time_in
+time_out
+overtime
+late_time
+total_hours
+
+tbl_payroll
+id -- auto_int
+emp_id
+dop
+pay_period
+role --- tbl_employee
+ntxt_allowance
+gross_pay
+sss_num --- tbl_employee
+philhealth_num --- tbl_employee
+pagibig_num --- tbl_employee
+absences
+tax
+total_deduction
+net_pay

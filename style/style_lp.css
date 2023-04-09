@@ -1,0 +1,56 @@
+body {
+	margin: 0 2% 2% 2%;
+	font-family: Segoe UI;
+}
+.home, .about{
+	text-align: center;
+}
+.home {
+	background-image: url("../img/bg-1.jpg");
+	height: 500px;
+	opacity: 0.75;
+}
+.home h1 {
+	font-size: 70px;
+	color: white;
+}
+.home p {
+	font-size: 18px;
+	color: white;
+}
+.book {
+	border-radius: 8px;
+	height: 60px;
+	width: 150px;
+	font-weight: bold;
+}
+.book:hover {
+	background-color: #a22020;
+	color: white;
+}
+.about h1 {
+	font-size: 60px;
+}
+.about p {
+	font-size: 18px;
+	margin: 0 5% 0 5%;
+}
+.mv .left {
+	background-color: #E8534E;
+	width: 50%;
+	height: 350px;
+	float: left;
+	text-align: center;
+}
+.mv .right {
+	background-color: #E8534E;
+	width: 50%;
+	height: 350px;
+	float: right;
+	text-align: center;
+}
+.mv p {
+	margin: 0 7% 0 7%;
+	text-align: justify;
+	font-size: 18px;
+}

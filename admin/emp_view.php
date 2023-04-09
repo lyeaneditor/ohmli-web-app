@@ -35,10 +35,10 @@
 	<br>
 	<center>
 	<table>
-	<tr><td><a href="emp_view.php"><button>Employees</button></a></td></tr>
+	<tr><td><a href="emp_view.php"><button class="emp">Employees</button></a></td></tr>
 	<tr><td><a href="attendance_view.html"><button>Attendance</button></a></td></tr>
 	<tr><td><a href="payroll_view.html"><button>Payroll</button></a></td></tr>
-	<tr><td><a href="fem_doctor_view.html"><button class="doc">Doctor</button></a></td></tr>
+	<tr><td><a href="fem_doctor_view.html"><button>Doctor</button></a></td></tr>
 	<tr><td><a href="sched_view.html"><button>Schedule</button></a></td></tr>
 	<tr><td><a href="prof_view.php"><button>Profile</button></a></td></tr>
 
@@ -50,7 +50,7 @@
 	
 	<div class="con">
 		<div class="title">
-		<p>Doctors' List Appointment
+		<p>Employees
 		<table>
 		<tr>
 		<td><a href=""><img src="../img/print.png"/><a/></td>
@@ -61,66 +61,47 @@
 		</p>
 		</div>
 		<div class="info table-wrapper-scroll-y my-custom-scrollbar">
-		<table>
-		<tr><td><a href="fem_doctor_view.html"><button>Female Doctor</button></a></td>
-		<td><a href="male_doctor_view.html"><button>Male Doctor</button></a></td></tr>
-		</table>
-		<br>
-		<table>
-		<tr><td>Doctor:</td>
-		<td>Lyean Elisan</td></tr>
-		</table>
-		<br>
 		<center>
 		<table class="table table-hover">
 		<thead>
 		<tr>
-		<th scope="col">Patient</th>
+		<th scope="col">Name</th>
+		<th scope="col">Role</th>
 		<th scope="col">Age</th>
-		<th scope="col">Service</th>
-		<th scope="col">Test</th>
-		<th scope="col">Time</th>
-		<th scope="col">Status</th>
+		<th scope="col">Address</th>
+		<th scope="col">Birthdate</th>
+		<th scope="col">Contact #</th>
+		<th scope="col">SSS</th>
+		<th scope="col">PAG-IBIG</th>
+		<th scope="col">PHILHEALTH</th>
+		<th scope="col">TIN</th>
+		<th scope="col">Contact Person</th>
+		<th scope="col">Contact #</th>
 		<th scope="col">Option</th>
 		</tr>
 		</thead>
 		<tbody>
-		<tr>
-		<td scope="row">sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		</tr>
-		<tr>
-		<td scope="row">sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		</tr>
-		<tr>
-		<td scope="row">sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		</tr>
-		<tr>
-		<td scope="row">sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		<td>sample</td>
-		</tr>
+		<?php
+		$mysqli = mysqli_connect("localhost", "root", "", "db_ohmli");
+		$search_result = mysqli_query($mysqli, "SELECT * FROM tbl_employee ORDER BY `last_name`");
+		while($res = mysqli_fetch_array($search_result)) {
+		echo "<tr>";
+		echo "<td>" .$res['last_name'] .", " .$res['first_name']. "</td>";
+		echo "<td>" .$res['role']. "</td>";
+		echo "<td>" .$res['age']. "</td>";
+		echo "<td>" .$res['address']. "</td>";
+		echo "<td>" .$res['birthdate']. "</td>";
+		echo "<td>" .$res['contact_num']. "</td>";
+		echo "<td>" .$res['sss_num']. "</td>";
+		echo "<td>" .$res['pagibig_num']. "</td>";
+		echo "<td>" .$res['philhealth_num']. "</td>";
+		echo "<td>" .$res['tin_num']. "</td>";
+		echo "<td>" .$res['emerg_contact_last_name'] .", " .$res['emerg_contact_first_name']. "</td>";
+		echo "<td>" .$res['emerga_contact']. "</td>";
+		echo "<td><a href=\"view.php?id=$res[id]\">View</a> | <a href=\"delc.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+		echo "</tr>";
+		}
+		?>
 		</tbody>
 		</table>
 		</center>

@@ -31,8 +31,8 @@ while($res = mysqli_fetch_array($result)) {
 		echo "<td>" .$res['last_name']. "</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<th>Role: </th>";
-		echo "<td>" .$res['role']. "</td>";
+		echo "<th>user_type: </th>";
+		echo "<td>" .$res['user_type']. "</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<th>Password: </th>";

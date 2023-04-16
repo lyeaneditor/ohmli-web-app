@@ -1,9 +1,10 @@
 body {
-	margin: 0 2% 2% 2%;
 	font-family: Segoe UI;
+	margin: 0 2% 2% 2%;
 }
-.home, .about{
+.home {
 	text-align: center;
+	background-color: #E8534E;
 }
 .home {
 	background-image: url("../img/bg-1.jpg");
@@ -27,6 +28,12 @@ body {
 .book:hover {
 	background-color: #a22020;
 	color: white;
+}
+.about {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	background-color: #E8534E;	
 }
 .about h1 {
 	font-size: 60px;
@@ -53,4 +60,53 @@ body {
 	margin: 0 7% 0 7%;
 	text-align: justify;
 	font-size: 18px;
+}
+.serv .left {
+	text-align: center;
+	background-color: #E8534E;
+	width: 50%;
+	height: 720px;
+	float: left;
+}
+.serv .right {
+	background-color: #E8534E;
+	width: 50%;
+	height: 720px;
+	float: right;
+}
+.serv .right p {
+	font-weight: bold;
+	font-size: 18px;
+}
+.con .left {
+	text-align: center;
+	background-color: #E8534E;
+	width: 50%;
+	height: 500px;
+	float: left;
+}
+.con .right {
+	background-color: #E8534E;
+	width: 50%;
+	height: 500px;
+	float: right;
+}
+input, select, textarea {
+	border-style: none;
+	border-bottom: 2px solid #a22020;
+}
+input[type="submit"] {
+	border: 2px solid #a22020;
+	font-size: 18px;
+}
+input[type="submit"]:hover {
+	background-color: #a22020;
+	border: 2px solid #fff;
+	color: #fff;
+}
+.modal-body p {
+	font-size: 16px;
+}
+input:focus, select:focus, textarea:focus {
+	outline: none;
 }

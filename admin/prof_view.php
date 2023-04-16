@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +35,9 @@
 	<br>
 	<img src="../img/profile.png" height="140px" width="140px"/>
 	<br>
-	<p>Lyean Marielle R. Elisan</p>
+	<?php
+	echo "<p>" .$_SESSION['last_name'] .", " .$_SESSION['first_name']. "</p>";
+	?>
 	<br>
 	<center>
 	<table>
@@ -66,8 +71,8 @@
 		<div class="modal-body">
 		<span class="close">&times;</span>
 		<form action="../config/add_user.php" method="POST">
-			<select name="role" id="role">
-			<option value="Select Type" selected>Select Role</option>
+			<select name="user_type" id="user_type">
+			<option value="Select Type" selected>Select user_type</option>
 			<option value="Admin">Admin</option>
 			<option value="HR">HR</option>
 			<option value="Nurse">Nurse</option>
@@ -102,7 +107,7 @@
 		<th scope="col">#</th>
 		<th scope="col">Employee ID</th>
 		<th scope="col">Name</th>
-		<th scope="col">Role</th>
+		<th scope="col">user_type</th>
 		<th scope="col">Option</th>
 		</tr>
 		</thead>
@@ -116,7 +121,7 @@
 		echo "<td>" .$res['id']. "</td>";
 		echo "<td>" .$res['emp_id']. "</td>";
 		echo "<td>" .$res['last_name'] .", " .$res['first_name']. "</td>";
-		echo "<td>" .$res['role']. "</td>";
+		echo "<td>" .$res['user_type']. "</td>";
 		echo "<td><a href=\"view.php?id=$res[id]\">View</a> | <a href=\"delc.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 		echo "</tr>";
 		}

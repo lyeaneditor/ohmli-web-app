@@ -9,7 +9,6 @@
 	<script src="./style/jquery.min.js"></script>
 	<script src="./style/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="./style/style_lp.css">
-	<link rel="stylesheet" href="./style/modal.css">
 	</head>
 	<nav class="navbar sticky-top navbar-default">
 		<div class="container-fluid bg-danger">
@@ -30,77 +29,98 @@
 	<br><br><br>
 	<p>We understand that your time is valuable, and we want to make sure you have the best care possible. That's why we work hard to give you the best experience possible when it comes to your medical needs</p>
 	<br><br><br>
+	<link rel="stylesheet" href="./style/modal.css">
 	<button class="book" id="myBtn">BOOK NOW!</button>
 	<div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="modal-content">
 	<div class="modal-header">
 		<span class="close">&times;</span>
-		<h2>Modal Header</h2>
+		<h2>Appointment</h2>
 	</div>
 	<div class="modal-body">
 	<span class="close">&times;</span>
 	<form action="./config/book_appointment.php" method="POST">
-	<table>
+	<center>
+	<br>
+	<table style="width:400px;">
 			<tr>
-			<p><th>First Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-			<td><input type="text" id="fn" name="fn" placeholder="Enter your first name" ></td>
-			</p>
+				<p><th>First Name: </th>
+				<td><input type="text" id="fn" name="fn" placeholder="Enter your first name" ></td></p>
 			</tr>
-			<p>Last Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="text" id="ln" name="ln" placeholder="Enter your last name" ></p></p>
-			<p>Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="text" id="email" name="email" placeholder="Enter your email" ></p>			
-			<p>Contact: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="text" id="contact" name="contact" placeholder="Enter your contact number" ></p>
-			<p>Sex: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<select name="sex" id="sex">
-			<option value="Select Type" selected>Select Sex</option>
-			<option value="Male">Male</option>
-			<option value="Female">Female</option>
-			</select></p>
-			<p>Birthdate: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="date" id="bd" name="bd"></p>
-			<p>Address: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<textarea id="address" name="address" placeholder="Enter your address" ></textarea></p>
-			<p>Referral/Agency: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="text" id="ref" name="ref" placeholder="Enter your referral/agency" ></p>
-			<p>Service: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<select name="service" id="service">
-			<option value="Select Service" selected>--- Select Service ---</option>
-			<option value="Local Pre-employment Medical Examination">Local Pre-employment Medical Examination</option>
-			<option value="Overseas Pre-employment Medical Examination Sea-based Preemployment Medical Examination">Overseas Pre-employment Medical Examination Sea-based Preemployment Medical Examination</option>
-			<option value="Mobile Service (Annual Check-up) ">Mobile Service (Annual Check-up)</option>
-			<option value="Neuro-psychological Examination omplete Laboratory Diagnostics">Neuro-psychological Examination omplete Laboratory Diagnostics</option>
-			</select></p>
-			<p>Appointment Date: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="date" id="ad" name="ad"></p>
-			<p>Appointment Time: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<select name="at" id="at">
-			<option value="Select Time" selected>Select Time</option>
-			<option value="7:00:00">7:00AM</option>
-			<option value="9:00:00">9:00AM</option>
-			<option value="11:00:00">11:00AM</option>
-			<option value="13:00:00">1:00PM</option>
-			<option value="15:00:00">3:00PM</option>
-			</select></p>
-			<br/>
-			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="book" value="Book Now!">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="submit" name="cancel" value="Cancel">
+			<tr>
+				<p><th>Last Name: </th>
+				<td><input type="text" id="ln" name="ln" placeholder="Enter your last name" ></td></p>
+			</tr>
+			<tr>
+				<p><th>Email: </th>
+				<td><input type="text" id="email" name="email" placeholder="Enter your email" ></td></p>
+			</tr>
+			<tr>	
+				<p><th>Contact: </th>
+				<td><input type="text" id="contact" name="contact" placeholder="Enter your contact number" ></td></p>
+			</tr>
+			<tr>
+				<p><th>Sex: </th>
+				<td><select name="sex" id="sex">
+				<option value="Select Type" selected>Select Sex</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				</select></td></p>
+			</tr>
+			<tr>
+				<p><th>Birthdate: </th>
+				<td><input type="date" id="bd" name="bd"></p>
+			</tr>
+			<tr>
+				<p><th>Address: </th>
+				<td><textarea id="address" name="address" placeholder="Enter your address" ></textarea></td></p>
+			</tr>
+			<tr>
+				<p><th>Referral/Agency: </th>
+				<td><input type="text" id="ref" name="ref" placeholder="Enter your referral/agency" ><td></p>
+			</tr>
+			<tr>
+				<p><th>Service: </th>
+				<td><select name="service" id="service" style="width:200px;">
+				<option value="Select Service" selected>--- Select Service ---</option>
+				<option value="Local Pre-employment Medical Examination">Local Pre-employment Medical Examination</option>
+				<option value="Overseas Pre-employment Medical Examination Sea-based Preemployment Medical Examination">Overseas Pre-employment Medical Examination Sea-based Preemployment Medical Examination</option>
+				<option value="Mobile Service (Annual Check-up) ">Mobile Service (Annual Check-up)</option>
+				<option value="Neuro-psychological Examination omplete Laboratory Diagnostics">Neuro-psychological Examination omplete Laboratory Diagnostics</option>
+				</select></td></p>
+			</tr>
+			<tr>
+				<p><th>Appointment Date: </th>
+				<td><input type="date" id="ad" name="ad"></td></p>
+			</tr>
+				<p><th>Appointment Time: </th>
+				<td><select name="at" id="at">
+				<option value="Select Time" selected>Select Time</option>
+				<option value="7:00:00">7:00AM</option>
+				<option value="9:00:00">9:00AM</option>
+				<option value="11:00:00">11:00AM</option>
+				<option value="13:00:00">1:00PM</option>
+				<option value="15:00:00">3:00PM</option>
+				</select></td></p>
+			</tr>
 	</table>
-			</form>
+	<br/><br/>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="book" value="Book Now!">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input type="submit" name="cancel" value="Cancel">
+	</center>
+	<br/><br/>
+	</form>
 	</div>
 	<div class="modal-footer">
-		<h3>Modal Footer</h3>
+		<h4>One Health Medical Laboratory Inc.</h4>
 	</div>
 	</div>
-	
 	</div>
 	</div>
-	<br>
 	<div class="about" id="about">
-	<h1>About</h1>
-	<br>
+		<h1>About</h1>
+		<br/><br/>
 		<p>
 		Onehealth Medical Laboratory Inc. 
 		was established in September 2011 headed by Dr. Marius W. Sing, MD, 
@@ -141,12 +161,15 @@
 			</p>
 		</div>
 	</div>
-	<br>
-	<div id="services">
+	<br><br>
+	<div class="serv" id="services">
 		<div class="left">
+		<br><br><br><br>
+		<img src="./img/nurse.jpg" height="500px" width="470px"/>
 		</div>
 		<div class="right">
 			<h1>We commit to 100% accurate and fast results, all the time!</h1>
+			<br>
 			<ul><p>Medical Examinations</p>
 				<li>Local Pre-employment Medical Examination</li>
 				<li>Overseas Pre-employment Medical Examination</li>
@@ -171,20 +194,34 @@
 			</ul>
 		</div>
 	</div>
-	
-	<div id="contacts">
+	<div class="con" id="contacts">
 		<div class="left">
+		<br>
+		<div class="mapouter">
+		<div class="gmap_canvas">
+		<iframe width="400px" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Faura Medical Bldg, 577 P Padre Faura St, Ermita, Manila, Philippines&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		<style>.mapouter{position:relative;text-align:center;height:100%;width:100%;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+		</div>
+		</div>
 		</div>
 		<div class="right">
-		<h1>Feel free to call, email, or hit us up on our social media accounts</h1>
+		<h1>Talk to us!</h1>
+		<p>Feel free to call, email, or hit us up on our social media accounts</p>
 		<table>
 			<tr>
 				<td>EMAIL</td>
 				<td>PHONE</td>
 			</tr>
 			<tr>
-				<td>1healthmedical@gmail.com</td>
+				<td width="300px">1healthmedical@gmail.com</td>
 				<td>28522-0728</td>
+			</tr>
+		</table>
+		</table>
+		<br>
+			<tr>
+				<td>Address:</td>
+				<td>Faura Medical Bldg, 577 P Padre Faura St, Ermita, Manila</td>
 			</tr>
 		</table>
 		</div>

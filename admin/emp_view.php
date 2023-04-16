@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +34,9 @@
 	<br>
 	<img src="../img/profile.png" height="140px" width="140px"/>
 	<br>
-	<p>Lyean Marielle R. Elisan</p>
+	<?php
+	echo "<p>" .$_SESSION['last_name'] .", " .$_SESSION['first_name']. "</p>";
+	?>
 	<br>
 	<center>
 	<table>
@@ -66,7 +71,7 @@
 		<thead>
 		<tr>
 		<th scope="col">Name</th>
-		<th scope="col">Role</th>
+		<th scope="col">user_type</th>
 		<th scope="col">Age</th>
 		<th scope="col">Address</th>
 		<th scope="col">Birthdate</th>
@@ -87,7 +92,7 @@
 		while($res = mysqli_fetch_array($search_result)) {
 		echo "<tr>";
 		echo "<td>" .$res['last_name'] .", " .$res['first_name']. "</td>";
-		echo "<td>" .$res['role']. "</td>";
+		echo "<td>" .$res['user_type']. "</td>";
 		echo "<td>" .$res['age']. "</td>";
 		echo "<td>" .$res['address']. "</td>";
 		echo "<td>" .$res['birthdate']. "</td>";

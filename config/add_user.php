@@ -4,11 +4,11 @@
 	$first_name=$_POST['fn'];
 	$last_name=$_POST['ln'];
 	$password=$_POST['p'];
-	$role=$_POST['role'];
+	$user_type=$_POST['user_type'];
 	
 	$conn= mysqli_connect("localhost", "root", "", "db_ohmli");
 	
-	$query ="INSERT INTO `tbl_user` (`emp_id`, `first_name`, `last_name`, `password`, `role`) VALUES ('$emp_id', '$first_name', '$last_name', '$password', '$role');";
+	$query ="INSERT INTO `tbl_user` (`emp_id`, `first_name`, `last_name`, `password`, `user_type`) VALUES ('$emp_id', '$first_name', '$last_name', '$password', '$user_type');";
 	mysqli_query($conn, $query);
 	header("Location:../admin/prof_view.php");
 	}

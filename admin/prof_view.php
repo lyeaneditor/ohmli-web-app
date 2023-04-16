@@ -71,19 +71,20 @@ session_start();
 		<div class="modal-body">
 		<span class="close">&times;</span>
 		<form action="../config/add_user.php" method="POST">
+			<p style="color: black";>User Type:
 			<select name="user_type" id="user_type">
 			<option value="Select Type" selected>Select user_type</option>
 			<option value="Admin">Admin</option>
 			<option value="HR">HR</option>
 			<option value="Nurse">Nurse</option>
-			</select>
-			<p>Employee ID: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</select></p>
+			<p style="color: black";>Employee ID: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" id="emp_id" name="emp_id" placeholder="Employee ID Number" ></p>
-			<p>Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<p style="color: black";>Password: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" id="p" name="p" placeholder="Password" ></p>
-			<p>First Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<p style="color: black";>First Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" id="fn" name="fn" placeholder="First Name" ></p>
-			<p>Last Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<p style="color: black";>Last Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" id="ln" name="ln" placeholder="Last Name" ></p></p>
 			<br/>
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="save" value="Save">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -115,7 +116,7 @@ session_start();
 		<tr>
 		<?php
 		$mysqli = mysqli_connect("localhost", "root", "", "db_ohmli");
-		$search_result = mysqli_query($mysqli, "SELECT * FROM tbl_user ORDER BY `id`");
+		$search_result = mysqli_query($mysqli, "SELECT * FROM tbl_user ORDER BY id");
 		while($res = mysqli_fetch_array($search_result)) {
 		echo "<tr>";
 		echo "<td>" .$res['id']. "</td>";
